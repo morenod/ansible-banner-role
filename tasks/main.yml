@@ -1,11 +1,13 @@
 ---
-- name: Apply template to banner files
-  template:
-    src: banner.j2
-    dest: "{{ item }}"
-    mode: 0644
-    owner: root
-    group: root
-  with_items:
-    - /etc/issue
-    - /etc/motd
+- debug: msg="Hello"
+  delegate_to: 127.0.0.1
+#- name: Apply template to banner files
+#  template:
+#    src: banner.j2
+#    dest: "{{ item }}"
+#    mode: 0644
+#    owner: root
+#    group: root
+#  with_items:
+#    - /etc/issue
+#    - /etc/motd
